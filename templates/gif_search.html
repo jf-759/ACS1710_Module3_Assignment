@@ -34,7 +34,7 @@ Gif Search
     TODO: Only show this section if there are GIFs to show 
 
 -->
-
+{% if gifs %}
 <section id="form_results">
     <p>
         Here are your GIFs:
@@ -48,9 +48,14 @@ Gif Search
             
     -->
 
+    {% for gif in gifs %}
+
     <p>
-        <img src="https://your/gif/url/goes/here" alt="GIF">
+        <img src="{{gif.media_formats.gif.url}}" alt="GIF">
     </p>
+    {% endfor %}
+
 </section>
+{% endif %}
 
 {% endblock %}
