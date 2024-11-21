@@ -248,7 +248,7 @@ def gif_search():
         return render_template('gif_search.html')
 
     
-    
+api_key = os.getenv('API_key')
 
 if __name__ == '__main__':
     app.config['ENV'] = 'development'
